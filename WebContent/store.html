@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>店铺信息</title>
+    <style>
+      .main {
+        width: 980px;
+        margin: 0 auto;
+        padding-bottom: 150px;
+      }
+      li {
+        list-style-type: none;
+      }
+      .shop-header {
+        padding: 10px 0;
+        position: relative;
+        width: 980px;
+      }
+      .shop-header i {
+        display: inline-block;
+        background: url("./img/store-header.png") repeat 0 0;
+        width: 411px;
+        height: 11px;
+        position: absolute;
+        top: 32px;
+      }
+      .l-pic {
+        left: 0;
+      }
+      .r-pic {
+        right: 0;
+      }
+      h3 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font: 24px "微软雅黑";
+        font-weight: 700;
+        color: #ec1611;
+      }
+    </style>
+
+    <style>
+      .shop-container {
+        margin-top: 20px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .border {
+        border-radius: 3px;
+        box-shadow: 3px 3px 3px 0.3;
+        transition: 0.3s;
+      }
+      .border:hover {
+        box-shadow: 5px 0 10px #ddd, -5px 0 10px #ddd;
+      }
+      .good-item {
+        width: 310px;
+        height: 320px;
+        background: #f1f1f1;
+        margin-top: 12px;
+      }
+      .good-item > img {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- <img src="./img/store-header.png" alt="" /> -->
+      <div class="shop-header">
+        <i class="l-pic"></i>
+        <h3>全部商品</h3>
+        <i class="r-pic"></i>
+      </div>
+
+      <div class="shop-container">
+        <div class="good-item border">
+          <img src="./img/g4.jpg" alt="" />
+        </div>
+        <div class="good-item border">
+          <img src="./img/g3.jpg" alt="" />
+        </div>
+        <div class="good-item border">
+          <img src="./img/g2.jpg" alt="" />
+        </div>
+        <div class="good-item border">
+          <img src="./img/g1.jpg" alt="" />
+        </div>
+        <div class="good-item border">
+          <img src="./img/g7.jpg" alt="" />
+        </div>
+        <div class="good-item border">
+          <img src="./img/g8.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

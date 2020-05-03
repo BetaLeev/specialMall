@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录 / 注册</title>
+    <style>
+      .container {
+        margin: 0 auto;
+        background: #f1f1f1;
+        width: 255px;
+        padding-bottom: 100px;
+        border-radius: 19px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+      }
+      .user-header {
+        padding: 10px 30px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: #85baeb;
+      }
+
+      .user-main {
+        padding: 10px;
+        /* background: #fff; */
+        margin: 20px auto;
+      }
+      .user-label {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .user-label input {
+        width: 123px;
+        height: 20px;
+        font-size: 14px;
+        margin-left: -30px;
+      }
+      .login {
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 20px;
+      }
+
+      .login button {
+        color: white;
+        border-radius: 4px;
+        margin: 10px;
+        width: 133px;
+        height: 43px;
+        font-size: 15px;
+        line-height: 23px;
+        padding: 10px;
+      }
+      .btn-blue {
+        background: #85baeb;
+      }
+      .btn-green {
+        background: #85eb85;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="user-header">
+        <span>
+          注册
+        </span>
+        <span>登录</span>
+      </div>
+
+      <div class="user-main">
+        <div class="user-label">
+          <p class="label">邮箱：</p>
+          <input type="text" />
+        </div>
+
+        <div class="user-label">
+          <p class="label">密码：</p>
+          <input type="password" />
+        </div>
+        <div class="login">
+          <button class="btn-blue">注册</button>
+          <button class="btn-green">取消</button>
+        </div>
+      </div>
+
+      <!-- <div class="user-main">
+        <div class="user-label">
+          <p class="label">邮箱：</p>
+          <input type="text" />
+        </div>
+
+        <div class="user-label">
+          <p class="label">密码：</p>
+          <input type="password" />
+        </div>
+        <div class="login">
+          <button class="btn-green">登录</button>
+          <button class="btn-blue">取消</button>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>

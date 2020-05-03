@@ -1,0 +1,24 @@
+{
+  "data": {
+    "user": [
+      {
+        "email": "a@a.com",
+        "age": 33,
+        "password": "abcabc"
+      }
+    ],
+    "goods": [
+      {
+        "email": "a@a.com",
+        "age": 33,
+        "password": "abcabc"
+      }
+    ],
+    "shop": [
+      {
+        "img": "./img/l1.jpg",
+        "name": "绿星农业"
+      }
+    ]
+  }
+}

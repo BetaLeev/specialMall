@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品详情页</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      main {
+        margin: 0 auto;
+        width: 850px;
+        padding: 30px;
+        display: flex;
+      }
+      .main-img {
+        width: 400px;
+        height: 400px;
+        background: #f3f3f3;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      .main-container {
+        box-sizing: border-box;
+        padding-left: 30px;
+        width: 600px;
+        height: 400px;
+      }
+      .title {
+        font-size: 23px;
+        margin-bottom: 23px;
+      }
+      .price {
+        color: #ff0000;
+        font-size: 33px;
+        margin-bottom: 43px;
+      }
+      .desc {
+        margin-bottom: 73px;
+      }
+
+      .btn {
+        margin-right: 20px;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        height: 32px;
+        padding: 0 15px;
+        font-size: 14px;
+        border-radius: 4px;
+        transition: color 0.2s linear, background-color 0.2s linear,
+          border 0.2s linear, box-shadow 0.2s linear;
+        color: #515a6e;
+        background-color: #fff;
+        border-color: #dcdee2;
+      }
+      .btn-success {
+        color: #fff;
+        background-color: #19be6b;
+        border-color: #19be6b;
+      }
+      .btn-warn {
+        color: #fff;
+        background-color: #f90;
+        border-color: #f90;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="main-img">
+        <img src="./img/g7.jpg" alt="" />
+      </div>
+      <div class="main-container">
+        <div class="title">
+          大凉山特产正中苦荞沙琪玛468克，2件包邮（新疆、西藏、青海除外）
+        </div>
+
+        <div class="price">¥53.80</div>
+
+        <div class="desc">
+          原料来自海拔2000米以上的高寒地区，生长环境优良，无病虫害侵蚀，远离污染，甜而不腻
+          香软不粘牙
+        </div>
+
+        <div class="operator">
+          <button class="btn btn-success">立即购买</button>
+          <button class="btn btn-warn">加入购物车</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

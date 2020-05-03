@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物车</title>
+    <style>
+      .cart {
+        width: 990px;
+        margin: 10px auto;
+        padding: 0 30px;
+        border: 1px solid #dfdfdf;
+        border-radius: 5px;
+        background: #fff;
+        color: #666;
+        line-height: 40px;
+      }
+      .center-body {
+        margin: 0 auto;
+      }
+      .cart-header {
+        margin: 0 auto;
+      }
+      thead th {
+        width: 210px;
+        text-align: center;
+      }
+      td {
+        width: 210px;
+        text-align: center;
+      }
+
+      .good {
+        height: 88px;
+        width: 150px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .good-img {
+        height: 80px;
+        width: 80px;
+        margin-right: 10px;
+        background: #f1f1f1;
+      }
+      .cart-bottom {
+        margin: 0 auto;
+        width: 1180px;
+        display: flex;
+        height: 55px;
+        line-height: 55px;
+        justify-content: space-around;
+      }
+      .cart-bottom div {
+        height: 55px;
+      }
+      .cart-count {
+        padding-left: 120px;
+        width: 320px;
+        padding-right: 420px;
+      }
+      .cart-sum {
+        width: 150px;
+      }
+      .cart-shopping {
+        flex: 1;
+      }
+      .cart-shopping button {
+        height: 55px;
+        display: inline-block;
+        width: 110px;
+        text-align: center;
+        background-color: #ff6c6c;
+        font-family: "microsoft yahei";
+        font-weight: bold;
+        font-size: 17px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="cart-header cart">
+          <table class="center-body">
+            <thead>
+              <th>id</th>
+              <th>商品信息</th>
+              <th>单价（元）</th>
+              <th>数量</th>
+              <th>小计</th>
+              <th>操作</th>
+            </thead>
+          </table>
+        </div>
+        <div class="cart-container cart">
+          <table class="center-body">
+            <tbody>
+              <tr>
+                <td>123</td>
+                <td>
+                  <div class="good">
+                    <img class="good-img" src="./img/g1.jpg" alt="" />
+                    <div class="good-desc">脆枣</div>
+                  </div>
+                </td>
+                <td>23</td>
+                <td>2</td>
+                <td>46</td>
+                <td>❌</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>
+                  <div class="good">
+                    <img class="good-img" src="./img/g10.jpg" alt="" />
+                    <div class="good-desc">沙琪玛</div>
+                  </div>
+                </td>
+                <td>13</td>
+                <td>2</td>
+                <td>23</td>
+                <td>❌</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>
+                  <div class="good">
+                    <img class="good-img" src="./img/g3.jpg" alt="" />
+                    <div class="good-desc">古桥茶</div>
+                  </div>
+                </td>
+                <td>34</td>
+                <td>1</td>
+                <td>34</td>
+                <td>❌</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cart-bottom cart">
+          <div class="cart-count">共计： 5件商品</div>
+          <div class="cart-sum">合计： 123元</div>
+          <div class="cart-shopping"><button>结算</button></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
