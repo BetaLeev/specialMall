@@ -1,0 +1,412 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>后台管理系统</title>
+<style>
+body{
+background:#eaeaea;}
+.top-blue{
+    background:#2d8cf0;
+}
+.bg-white{
+    background:#ffffff;
+}
+.bg-gray{
+    background: #ebebeb;
+}
+
+.btn-blue{
+    background: #2397f9 ;
+}
+.active{
+    padding: 10px 0px;
+    background: #f1f1f1;
+}
+
+.cell{
+	padding: 10px;
+    background-color: #fff;
+	   border-radius: 4px;
+	 box-shadow: 0 1px 1px rgba(0,0,0,.05)
+     /*  0 2px 6px 0 rgba(0,0,0,.045); */
+}
+*{
+padding:0;
+margin:0;}
+div{
+box-sizing:border-box}
+Header{
+height:60px;
+line-height:60px;
+padding:0px 140px;
+color:#ffffff;
+display:flex;
+justify-content:space-around;
+}
+Header h3{
+}
+
+.container{
+display:flex;
+width:100%;
+}
+.slide-nav{
+width:140px;
+height:666px;
+background:#f8f8f9
+;
+}
+.slide-nav li{
+text-align:center;
+font-size:16px;
+margin:30px 0px;
+color:gray;
+
+}
+
+.main{
+flex:1;
+height:666px;
+margin:10px;
+background:#ffffff;
+}
+
+
+.slide-nav a{
+transition:.2s;}
+.slide-nav a:hover{
+	text-decoration:underline;
+}
+
+.main{
+margin:0 auto;
+padding:20px;}
+
+.table{
+width:100%;
+height:400px;
+padding:10px;
+background:#e8eaec
+;
+/* background:#edf9ff; */
+}
+</style>
+
+<style>
+.table-header{
+text-align:center;
+height:66px;
+line-height:66px;}
+.table-row{
+display:flex;
+padding:15px 20px;
+border-bottom:1px solid #c5c8ce;
+justify-content:space-between;
+}
+.table-col{
+width:50px;
+}
+.td-hd{
+text-align:center;
+margin:0 auto;}
+.address{
+width:239px;
+}
+</style>
+<style>
+.user-table{
+/* display:none */
+}
+
+.type-table{
+/* display:none */
+}
+</style>
+<style>
+    .user-search{
+        padding: 20px;
+        font-size: 22px;
+    }
+    .user-search input{
+        line-height: 30px;
+    }
+</style>
+</head>
+<body>
+<Header class="top-blue">
+<!-- <h4><a href='../home.jsp'>link -> main</a></h4> -->
+<h1>图书馆预约系统管理中心</h1>
+<h3>欢迎您：习管理员</h3>
+</Header>
+<div class='container'>
+<div class='slide-nav'>
+
+<ul>
+<li >
+<a>用户管理</a>
+</li>
+
+<li class="active">
+
+<a>添加用户</a>
+</li>
+
+<li >
+<a>搜索用户</a>
+</li>
+
+
+
+<li >
+<a>教室管理</a>
+</li>
+
+<li>
+<a>座位管理</a>
+</li>
+
+<li>
+<a>订座管理</a>
+</li>
+
+</ul>
+</div>
+<div class='main'>
+<div class="user-search">
+ <span>   姓名：</span> <input type="text">
+</div>
+
+<div class="user-search">
+    <span>性别：</span> <select name="" id="">
+        <option value="">男</option>
+        <option value="">女</option>
+    </select>
+   </div>
+
+   <div class="user-search">
+    <span> 班级：</span> <input type="text">
+   </div>
+
+
+   <div class="user-search">
+    <!-- <span> 张文显</span>  -->
+   </div>
+
+   <div class="user-search">
+    <input style="width: 120px;padding: 10px;font-size: 22px;background: #2878ef;color: #fff;" type="button" value="立即搜索">
+   </div>
+<!-- <div class='table  cell'>
+<h3 class='table-header'>用户管理</h3>
+<div class='table-content'>
+<div class='table-row'>
+<div class='tb-hd table-col'>序号</div>
+<div class='tb-hd table-col'>姓名</div>
+<div class='tb-hd table-col'>年龄</div>
+<div class='tb-hd table-col'>手机</div>
+<div class='tb-hd table-col'>性别</div>
+<div class=' tb-hd table-col address'>地址</div>
+<div class='tb-hd table-col'>操作</div>
+
+</div>
+
+<div class='table-row'>
+<div class='table-col'>001</div>
+<div class='table-col'>达芬奇</div>
+<div class='table-col'>2399</div>
+<div class='table-col'>134324234523</div>
+<div class='table-col'>女</div>
+<div class='table-col address'>北京中南海</div>
+<div class='table-col'><button class="cell">删除</button></div>
+</div>
+
+
+<div class='table-row'>
+    <div class='table-col'>001</div>
+    <div class='table-col'>达芬奇</div>
+    <div class='table-col'>2399</div>
+    <div class='table-col'>134324234523</div>
+    <div class='table-col'>女</div>
+    <div class='table-col address'>北京中南海</div>
+    <div class='table-col'><button class="cell">删除</button></div>
+    </div>
+
+</div>
+</div> -->
+
+<!-- <div class='table user-table'>
+<h3 class='table-header'>教室管理</h3>
+<div class='table-content'>
+<div class='table-row'>
+<div class='tb-hd table-col'>序号</div>
+
+<div class='tb-hd table-col'>楼名</div>
+<div class='tb-hd table-col'>楼层</div>
+<div class='tb-hd table-col'>教室号</div>
+<div class='tb-hd table-col'>座位数</div>
+<div class='tb-hd table-col'>空位</div>
+<div class=' tb-hd table-col address'>操作</div>
+
+
+
+</div>
+
+<div class='table-row'>
+<div class='table-col'>001</div>
+<div class='table-col'>明德楼</div>
+<div class='table-col'>2 层</div>
+<div class='table-col'>204 号</div>
+<div class='table-col'>49</div>
+<div class='tb-hd table-col'>21</div>
+<div class='table-col address'>✅</div>
+
+</div>
+
+<div class='table-row'>
+    <div class='table-col'>002</div>
+    <div class='table-col'>启智楼</div>
+    <div class='table-col'>1 层</div>
+    <div class='table-col'>104 号</div>
+    <div class='table-col'>59</div>
+    <div class='tb-hd table-col'>1</div>
+    <div class='table-col address'>✅</div>
+    </div>
+</div>
+<div class='table-row'>
+    <div class='table-col'>003</div>
+    <div class='table-col'>致远楼</div>
+    <div class='table-col'>5 层</div>
+    <div class='table-col'>594 号</div>
+    <div class='table-col'>49</div>
+    <div class='tb-hd table-col'>2</div>
+    <div class='table-col address'>✅</div>
+    
+    </div>
+</div>  -->
+
+ <!-- <div class='table user-table'>
+<h3 class='table-header'>预约信息管理</h3>
+<div class='table-content'>
+<div class='table-row'>
+<div class='tb-hd table-col'>序号</div>
+
+<div class='tb-hd table-col'>姓名</div>
+<div class='tb-hd table-col'>年龄</div>
+<div class='tb-hd table-col'>手机</div>
+<div class='tb-hd table-col'>性别</div>
+<div class=' tb-hd table-col address'>地址</div>
+
+</div>
+
+<div class='table-row'>
+<div class='table-col'>001</div>
+
+<div class='table-col'>达芬奇</div>
+<div class='table-col'>2399</div>
+<div class='table-col'>134324234523</div>
+<div class='table-col'>女</div>
+<div class='table-col address'>北京中南海</div>
+</div>
+</div>
+</div> -->
+
+
+<!-- <div class='table people-table'>
+<h3 class='table-header'>座位管理</h3>
+<div class='table-content'>
+<div class='table-row'>
+<div class='tb-hd table-col'>序号</div>
+<div class='tb-hd table-col'>楼名</div>
+<div class='tb-hd table-col'>层数</div>
+
+<div class='tb-hd table-col'>排</div>
+<div class='tb-hd table-col'>列</div>
+<div class='tb-hd table-col'>状态</div>
+<div class='tb-hd table-col'>编辑</div>
+</div>
+
+<div class='table-row'>
+<div class='table-col'>001</div>
+<div class='table-col'>启智楼</div>
+<div class='table-col'>333</div>
+<div class='table-col'>3</div>
+<div class='table-col'>2</div>
+<div class='table-col'>预约 ❌</div>
+<div class='tb-hd table-col'>📖</div>
+</div>
+
+<div class='table-row'>
+    <div class='table-col'>002</div>
+    <div class='table-col'>明理楼</div>
+    <div class='table-col'>133</div>
+    <div class='table-col'>8</div>
+    <div class='table-col'>2</div>
+    <div class='table-col'>空位 🈳️</div>
+    <div class='tb-hd table-col'>📖</div>
+    </div>
+    <div class='table-row'>
+    <div class='table-col'>003</div>
+    <div class='table-col'>逸夫楼</div>
+    <div class='table-col'>213</div>
+    <div class='table-col'>1</div>
+    <div class='table-col'>4</div>
+    <div class='table-col'>暂离 🌈</div>
+    <div class='tb-hd table-col'>📖</div>
+    </div>
+</div>
+</div> -->
+
+<!-- 
+<div class='table type-table'>
+<h3 class='table-header'>科室信息管理</h3>
+<div class='table-content'>
+<div class='table-row'>
+<div class='tb-hd table-col'>序号</div>
+
+<div class='tb-hd table-col'>姓名</div>
+<div class='tb-hd table-col'>年龄</div>
+<div class='tb-hd table-col'>手机</div>
+<div class='tb-hd table-col'>性别</div>
+<div class=' tb-hd table-col address'>地址</div>
+
+</div>
+
+<div class='table-row'>
+<div class='table-col'>001</div>
+
+<div class='table-col'>达芬奇</div>
+<div class='table-col'>2399</div>
+<div class='table-col'>134324234523</div>
+<div class='table-col'>女</div>
+<div class='table-col address'>北京中南海</div>
+</div>
+</div> -->
+
+<!-- <div class='table book-table'>
+<h3 class='table-header'>预约信息管理</h3>
+<div class='table-content'>
+<div class='table-row'>
+<div class='tb-hd table-col'>序号</div>
+<div class='tb-hd table-col'>姓名</div>
+<div class='tb-hd table-col'>年龄</div>
+<div class='tb-hd table-col'>手机</div>
+<div class='tb-hd table-col'>性别</div>
+<div class=' tb-hd table-col address'>地址</div>
+
+</div>
+</div> -->
+
+<!-- 1、预约实名制：请提供就诊患者真实姓名、身份证号（身份证、军官证、护照）、患者本人手机号等信息。
+
+2、电话及网络预约为北京市统一预约挂号平台预约:可预约七日内号源，支持24小时服务，每天上午7:00开始放号，下午3:00停止次日预约挂号。预约成功后请根据手机短信提示的时间和地点取号，过时号源作废。自助机和窗口均可办理取号（自助机可办理就医卡及充值、缴费业务）。平台预约规则请参看 www.bjguahao.gov.cn的预约须知。
+
+3、自助机预约：须持银联卡（信用卡、储蓄卡均可），医保卡（医保患者）。
+
+4、微信预约：医保患者需来院缴费取号后到分诊台刷卡候诊；非医保患者无需取号，直接到分诊台刷卡候诊。
+
+5、社区转诊预约：患者可在我院对口支援社区医疗机构办理转诊预约。 -->
+</div>
+</body>
+</html>

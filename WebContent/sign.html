@@ -67,13 +67,11 @@
   <body>
     <div class="container">
       <div class="user-header">
-        <span>
-          注册
-        </span>
-        <span>登录</span>
+        <span onclick="toggleSign('register','login')">注册</span>
+        <span onclick="toggleSign('login','register')">登录</span>
       </div>
 
-      <div class="user-main">
+      <div class="user-main" id="register">
         <div class="user-label">
           <p class="label">邮箱：</p>
           <input type="text" />
@@ -89,7 +87,7 @@
         </div>
       </div>
 
-      <!-- <div class="user-main">
+      <div class="user-main" id="login">
         <div class="user-label">
           <p class="label">邮箱：</p>
           <input type="text" />
@@ -103,7 +101,17 @@
           <button class="btn-green">登录</button>
           <button class="btn-blue">取消</button>
         </div>
-      </div> -->
+      </div>
     </div>
+    <script src="./api/http.js"></script>
+    <script>
+      let register = document.getElementById("register");
+      let login = document.getElementById("login");
+      // login.style.display = "none";
+      let toggleSign = (show, none) => {
+        document.getElementById(none).style.display = "none";
+        document.getElementById(show).style.display = "show";
+      };
+    </script>
   </body>
 </html>
