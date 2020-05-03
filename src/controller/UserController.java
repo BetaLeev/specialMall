@@ -17,12 +17,12 @@ public class UserController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		super.doGet(req, resp);
-//			 String id = req.getAttribute("id").toString();
-//			  id = req.getParameter("id");
+			 Object id = req.getAttribute("id");
+			  id = req.getParameter("id");
 //			 UserEntity user =  userService.queryById(id);
 //			 
-		//	  resp.getWriter().println(JSON.toString(user));
-//		resp.getWriter().println("Hello This is GET Response.");
+//			  resp.getWriter().println(JSON.toString(user));
+		resp.getWriter().println("Hello This is GET Response.");
 
 //		 
 			   
